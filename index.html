@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bagh-Chal Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>Bagh-Chal Game</h1>
+
+<input type="text" id="username" placeholder="Enter your name">
+
+<h3>Select Mode</h3>
+
+<button onclick="startGame('ai')">Play with AI</button>
+<button onclick="startGame('player')">Play with Player</button>
+
+</div>
+
+<script>
+
+function startGame(mode){
+
+let name=document.getElementById("username").value;
+
+if(name===""){
+alert("Enter your name");
+return;
+}
+
+localStorage.setItem("playerName",name);
+localStorage.setItem("gameMode",mode);
+
+window.location.href="code.html";
+
+}
+
+</script>
+
+</body>
+</html>
